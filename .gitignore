@@ -1,6 +1,5 @@
 .DS_Store
 node_modules/
-dist/
 vue/
 npm-debug.log
 yarn-error.log

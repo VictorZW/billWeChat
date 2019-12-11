@@ -1,0 +1,12 @@
+.section {
+  height: 100rpx;
+  border-bottom: 2rpx solid #DCE1EB;
+  display: flex;
+  align-items: center;
+  padding: 0 24rpx;
+  background-color: #FFFFFF;
+}
+
+.section .title {
+  margin-right: 20rpx;
+}
