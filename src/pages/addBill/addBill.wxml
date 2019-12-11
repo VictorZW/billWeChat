@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="section">
+      <picker mode="date" value="{{date}}" start="2017-01-01" end="2030-01-01" bindchange="bindDateChange">
+        <view class="picker">
+          <text class="title">日期</text>{{date}}
+        </view>
+      </picker>
+  </view>
+  <view class="section">
+    <text class="title">金额</text>
+    <input class="weui-input" type="digit" placeholder="0.0" />
+  </view>
+  <view class="section">
+    <picker
+            mode="selector"
+            bindchange="bindPickerChange"
+            value="{{index}}"
+            range="{{category}}"
+            range-key="category"
+    >
+      <view class="picker">
+          <text class="title">类型</text>{{array[index]}}
+      </view>
+    </picker>
+  </view>
+</view>
