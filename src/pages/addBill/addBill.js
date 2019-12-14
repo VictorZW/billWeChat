@@ -2,15 +2,47 @@ import http from '../../utils/api'
 
 Page({
   data: {
-    date: '2019-12-11',
-    category: []
+    categoryList: [],
+    pay_date: '',
+    cost: '',
+    category: '',
+    remark: ''
   },
-  onLoad: function() {
+  onLoad() {
+    this.getAllCategory()
+  },
+  // 时间
+  bindDateChange(e) {
+    this.setData({
+      pay_date: e.detail.value
+    })
+  },
+  // 金额
+  bindKeyInput(e) {
+    this.setData({
+      cost: e.detail.value
+    })
+  },
+  // 分类
+  bindPickerChange(e) {
+    const selectData = this.data.categoryList[e.detail.value]
+    this.setData({
+      category: selectData.category
+    })
+  },
+  // 备注
+  bindTextAreaInput(e) {
+    this.setData({
+      remark: e.detail.value
+    })
+  },
+  getAllCategory() {
     http.getAllCategoryApi({
+      data: {},
       success:res=>{
         console.log('接口请求成功', res.result)
         this.setData({
-          category: res.result
+          categoryList: res.result
         })
       },
       fail:err => {
@@ -18,10 +50,56 @@ Page({
       }
     })
   },
-  bindDateChange: function(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      date: e.detail.value
+  submitData() {
+    const sendData = {
+      pay_date: this.data.pay_date,
+      cost: this.data.cost,
+      category: this.data.category,
+      remark: this.data.remark
+    }
+    for (let key in sendData) {
+      // 在这里判断传过来的参数值为null，就删除这个属性
+      if (key !== 'remark') {
+        if (sendData[key] === null || sendData[key] === '') {
+          wx.showToast({
+            title: '请填写完整信息',
+            icon: 'none',
+            duration: 2000
+          })
+          return false
+        }
+      }
+    }
+    wx.showLoading({
+      title: '正在提交',
+      mask: true
+    })
+    http.addBillApi({
+      data: {
+        ...sendData
+      },
+      success:res => {
+        wx.hideLoading()
+        wx.showToast({
+          title: res.message,
+          icon: 'success',
+          duration: 2000
+        })
+        this.setData({
+          pay_date: '',
+          cost: '',
+          category: '',
+          remark: ''
+        })
+      },
+      fail:err => {
+        wx.hideLoading()
+        wx.showToast({
+          title: err,
+          icon: 'none',
+          duration: 2000
+        })
+      }
     })
   }
 })

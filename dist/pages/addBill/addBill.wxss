@@ -10,3 +10,17 @@
 .section .title {
   margin-right: 20rpx;
 }
+
+.section picker {
+  width: 100%;
+}
+
+.submitData {
+  margin-top: 36.10rpx;
+  width: 476rpx;
+  height: 80rpx;
+  border-radius: 17.10rpx;
+  background-color: #4083FF;
+  font-size: 36rpx;
+  color: #FFFFFF;
+}

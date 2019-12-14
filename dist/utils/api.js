@@ -9,9 +9,15 @@ import { http } from './http'
 
 // 请求所有分类的接口
 function getAllCategoryApi(params){
-  http('/category/getCategory','get',params)
+  http('/category/getCategory', 'get', params)
+}
+
+// 新增账单信息
+function addBillApi(params){
+  http('/bill/addBill', 'post', params)
 }
 
 export default {
-  getAllCategoryApi
+  getAllCategoryApi,
+  addBillApi
 }

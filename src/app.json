@@ -2,13 +2,44 @@
   "pages": [
     "pages/addBill/addBill",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/costDetail/costDetail",
+    "pages/userPage/userPage"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5D93FC",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#4083FF",
+    "list": [
+      {
+        "pagePath": "pages/addBill/addBill",
+        "text": "记账",
+        "iconPath": "images/addBill.png",
+        "selectedIconPath": "images/addBill_select.png"
+      },
+      {
+        "pagePath": "pages/costDetail/costDetail",
+        "text": "详细流水",
+        "iconPath": "images/costDetail.png",
+        "selectedIconPath": "images/costDetail_select.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "分析报告",
+        "iconPath": "images/report.png",
+        "selectedIconPath": "images/report_select.png"
+      },
+      {
+        "pagePath": "pages/userPage/userPage",
+        "text": "个人中心",
+        "iconPath": "images/userPage.png",
+        "selectedIconPath": "images/userPage_select.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
