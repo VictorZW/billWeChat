@@ -1,0 +1,26 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="container">
+    <view class="cost-list">
+        <view
+                class="cost-card"
+                wx:for="{{costList}}"
+                wx:for-item="item"
+                wx:key="item.id">
+            <view class="line">
+                <text>
+                    <text class="title">日期：</text>{{ filters.formatTime(item.pay_date) }}
+                </text>
+                <text>
+                    <text class="title">类别：</text>{{ item.category }}
+                </text>
+                <text>
+                    <text class="title">金额：</text>{{ item.cost }}
+                </text>
+            </view>
+            <view class="line">
+                <text>
+                    <text class="title">备注：</text>{{ item.remark }}</text>
+            </view>
+        </view>
+    </view>
+</view>

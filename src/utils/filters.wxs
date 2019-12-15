@@ -1,0 +1,17 @@
+var formatNumber = function (n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+var formatTime = function(pay_date) {
+  console.log(pay_date)
+  var date = getDate(pay_date)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  return [year, month, day].map(formatNumber).join('-')
+}
+
+module.exports = {
+  formatTime: formatTime
+}

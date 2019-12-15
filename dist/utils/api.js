@@ -17,7 +17,13 @@ function addBillApi(params){
   http('/bill/addBill', 'post', params)
 }
 
+// 查询所有费用数据
+function getAllBill(params) {
+  http('/bill/getAllBill', 'get', params)
+}
+
 export default {
   getAllCategoryApi,
-  addBillApi
+  addBillApi,
+  getAllBill
 }

@@ -1,0 +1,29 @@
+.cost-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.cost-list .cost-card {
+  width: 100%;
+  background: white;
+  box-shadow: 0rpx 2rpx 4rpx 0rpx rgba(215, 215, 215, 0.5);
+  margin-bottom: 20rpx;
+  padding: 20rpx 20rpx 0;
+  box-sizing: border-box;
+}
+
+.cost-list .cost-card .line {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20rpx;
+}
+
+.cost-list .cost-card .line .title {
+  color: #666666;
+}
+
+.cost-list .cost-card .line text {
+  font-size: 28rpx;
+}

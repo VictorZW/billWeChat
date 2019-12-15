@@ -1,0 +1,25 @@
+.cost-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  .cost-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 2px 0px rgba(215, 215, 215, 0.5);
+    margin-bottom: 10px;
+    padding: 10px 10px 0;
+    box-sizing: border-box;
+    .line {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      .title {
+        color: #666666;
+      }
+      text {
+        font-size: 14px;
+      }
+    }
+  }
+}
