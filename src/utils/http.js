@@ -31,7 +31,7 @@ module.exports = {
       method: method === 'post' ? 'post' : 'get', // 判断请求类型，除了值等于'post'外，其余值均视作get
       data,
       header: {
-        'content-type': 'application/json'
+        'content-type': method === 'get' ? 'application/json' : 'application/x-www-form-urlencoded'
       },
       success(res) {
         params.success&&params.success(res.data)
