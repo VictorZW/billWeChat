@@ -4,7 +4,8 @@
     "pages/costDetail/costDetail",
     "pages/logs/logs",
     "pages/userPage/userPage",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/toGetUserInfo/toGetUserInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

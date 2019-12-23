@@ -1,0 +1,42 @@
+.container-login {
+  background-color: #FFFFFF;
+}
+
+.container-login .app-icon-area {
+  padding-top: 120rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.container-login .app-icon-area .app-icon {
+  width: 136rpx;
+  height: 136rpx;
+  margin: auto;
+}
+
+.container-login .app-name {
+  padding-top: 130rpx;
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container-login .des {
+  padding-top: 40rpx;
+  padding-bottom: 72rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #787878;
+}
+
+.container-login .login-btn {
+  width: 690rpx;
+  height: 88rpx;
+  background-color: #4083FF;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  border-radius: 10rpx;
+  margin: auto;
+  text-align: center;
+}

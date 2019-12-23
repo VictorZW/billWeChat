@@ -1,0 +1,37 @@
+.container-login {
+  background-color: #FFFFFF;
+  .app-icon-area {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    .app-icon {
+      width: 68px;
+      height: 68px;
+      margin: auto;
+    }
+  }
+  .app-name {
+    padding-top: 65px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .des {
+    padding-top: 20px;
+    padding-bottom: 36px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(120, 120, 120);
+  }
+  .login-btn {
+    width: 345px;
+    height: 44px;
+    background-color: #4083FF;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 44px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+  }
+}
