@@ -32,11 +32,11 @@
 .container-login .login-btn {
   width: 690rpx;
   height: 88rpx;
+  line-height: 88rpx;
+  min-height: auto;
+  padding: 0;
   background-color: #4083FF;
   color: #FFFFFF;
   font-size: 28rpx;
-  line-height: 88rpx;
   border-radius: 10rpx;
-  margin: auto;
-  text-align: center;
 }

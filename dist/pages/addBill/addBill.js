@@ -9,6 +9,7 @@ Page({
     remark: ''
   },
   onLoad() {
+    console.log('shshsh')
     this.getAllCategory()
   },
   // 时间

@@ -1,4 +1,5 @@
-<view class="container container-login">
+<view class="container container-login"
+      wx:if="{{canIUse}}">
     <view class="app-icon-area">
         <image
                 src="{{appIconUrl}}"
@@ -9,5 +10,8 @@
     <view class="des">
         申请获取你的公开信息（昵称、头像等）
     </view>
-    <view class="login-btn">微信授权</view>
+    <button class="login-btn"
+            open-type="getUserInfo"
+            bindgetuserinfo="getUserInfo"> 微信授权 </button>
 </view>
+<view wx:else class="container">请升级微信版本</view>

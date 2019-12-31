@@ -26,12 +26,12 @@
   .login-btn {
     width: 345px;
     height: 44px;
+    line-height: 44px;
+    min-height: auto;
+    padding: 0;
     background-color: #4083FF;
     color: #FFFFFF;
     font-size: 14px;
-    line-height: 44px;
     border-radius: 5px;
-    margin: auto;
-    text-align: center;
   }
 }
