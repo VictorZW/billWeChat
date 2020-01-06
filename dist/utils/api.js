@@ -13,8 +13,8 @@ function getAllCategoryApi(params){
 }
 
 // 新增账单信息
-function addBillApi(params){
-  http('/bill/addBill', 'post', params)
+function addBillApi(body){
+  http('/bill/addBill', 'post', body)
 }
 
 // 查询所有费用数据
@@ -22,8 +22,14 @@ function getAllBill(params) {
   http('/bill/getAllBill', 'get', params)
 }
 
+// 登录
+function loginApi(body) {
+  http('/users/login', 'post', body)
+}
+
 export default {
   getAllCategoryApi,
   addBillApi,
-  getAllBill
+  getAllBill,
+  loginApi
 }

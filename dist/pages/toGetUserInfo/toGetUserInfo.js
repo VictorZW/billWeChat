@@ -14,7 +14,7 @@ Page({
         console.log(res.authSetting['scope.userInfo'])
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
-            success: (res) => {
+            success: () => {
               //从数据库获取用户信息
               this.queryUserInfo()
               //用户已经授权过
