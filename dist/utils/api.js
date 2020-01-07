@@ -27,9 +27,15 @@ function loginApi(body) {
   http('/users/login', 'post', body)
 }
 
+// 获取用户信息
+function queryUserInfoApi(body) {
+  http('/users/queryUserInfo', 'post', body)
+}
+
 export default {
   getAllCategoryApi,
   addBillApi,
   getAllBill,
-  loginApi
+  loginApi,
+  queryUserInfoApi
 }

@@ -1,0 +1,13 @@
+<view>
+    <view class="user-info">
+        <view class="user-avatar">
+            <image class="userInfo-avatar"
+                   src="{{userInfo.avatarUrl}}"
+                   mode="cover"></image>
+        </view>
+        <view class="user-info-msg">
+            <view class="user-name">{{userInfo.userName}}</view>
+            <view class="registration-time">注册时间：{{userInfo.registrationTime}}</view>
+        </view>
+    </view>
+</view>

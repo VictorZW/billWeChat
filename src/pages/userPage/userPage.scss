@@ -1,0 +1,24 @@
+.user-info {
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #5D93FC;
+  .user-avatar {
+    margin-right: 25px;
+    .userInfo-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+  }
+  .user-info-msg {
+    .user-name {
+      color: #FFFFFF;
+      font-size: 18px;
+    }
+    .registration-time {
+      color: #FFFFFF;
+      font-size: 12px;
+    }
+  }
+}

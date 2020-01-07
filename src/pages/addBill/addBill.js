@@ -9,7 +9,6 @@ Page({
     remark: ''
   },
   onLoad() {
-    console.log('shshsh')
     this.getAllCategory()
   },
   // 时间
@@ -41,7 +40,6 @@ Page({
     http.getAllCategoryApi({
       data: {},
       success:res=>{
-        console.log('接口请求成功', res.result)
         this.setData({
           categoryList: res.result
         })

@@ -6,12 +6,10 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onLoad() {
-    console.log(this.data.canIUse)
     // 查看是否授权
     wx.getSetting({
       success: (res) => {
-        console.log('1111')
-        console.log(res.authSetting['scope.userInfo'])
+        // console.log(res.authSetting['scope.userInfo'])
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: () => {
@@ -27,11 +25,8 @@ Page({
       }
     })
   },
-  queryUserInfo() {
-    console.log('111')
-  },
+  queryUserInfo() {},
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

@@ -13,7 +13,7 @@ App({
       // token为空,需要登录从后台获取token
       this.login()
     } else {
-      // that.queryUserInfo(token);
+      this.queryUserInfo(token)
     }
   },
   login() {
@@ -49,6 +49,20 @@ App({
         } else {
           console.info('获取用户登录凭证失败')
         }
+      }
+    })
+  },
+  queryUserInfo(token) {
+    http.queryUserInfoApi({
+      data: {
+        token: token
+      },
+      success: res => {
+        console.log(res.result)
+        this.globalData.userInfo = res.result
+      },
+      fail: err => {
+        console.log(err)
       }
     })
   },
