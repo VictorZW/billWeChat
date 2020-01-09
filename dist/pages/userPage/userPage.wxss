@@ -7,6 +7,7 @@
 
 .user-info .user-avatar {
   margin-right: 50rpx;
+  font-size: 0;
 }
 
 .user-info .user-avatar .userInfo-avatar {
@@ -15,12 +16,12 @@
   border-radius: 50%;
 }
 
+.user-info .user-info-msg {
+  display: flex;
+  align-items: center;
+}
+
 .user-info .user-info-msg .user-name {
   color: #FFFFFF;
   font-size: 36rpx;
-}
-
-.user-info .user-info-msg .registration-time {
-  color: #FFFFFF;
-  font-size: 24rpx;
 }

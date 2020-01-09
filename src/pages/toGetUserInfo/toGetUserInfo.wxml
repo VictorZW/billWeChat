@@ -12,6 +12,6 @@
     </view>
     <button class="login-btn"
             open-type="getUserInfo"
-            bindgetuserinfo="getUserInfo"> 微信授权 </button>
+            bindgetuserinfo="bindGetUserInfo"> 微信授权 </button>
 </view>
 <view wx:else class="container">请升级微信版本</view>

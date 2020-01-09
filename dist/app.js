@@ -9,59 +9,34 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    // token为空,需要登录从后台获取token
     if (token === null || token === '') {
-      // token为空,需要登录从后台获取token
-      this.login()
+      wx.reLaunch({
+        url: './pages/toGetUserInfo/toGetUserInfo'
+      })
     } else {
       this.queryUserInfo(token)
     }
   },
-  login() {
-    // 登录
-    wx.login({
-      success: res => {
-        const code = res.code
-        console.log('code:', code)
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        if (code) {
-          wx.getUserInfo({
-            success: res => {
-              this.globalData.userInfo = res.userInfo
-              const userInfo = res.userInfo
-              const username = userInfo.nickName
-              const avatarUrl = userInfo.avatarUrl
-              http.loginApi({
-                data: {
-                  username: username,
-                  avatarUrl: avatarUrl,
-                  code: code
-                },
-                success: res => {
-                  console.log(res.result)
-                  wx.setStorageSync('token', res.result.token)
-                },
-                fail: err => {
-                  console.log(err)
-                }
-              })
-            }
-          })
-        } else {
-          console.info('获取用户登录凭证失败')
-        }
-      }
-    })
-  },
+  // 通过token去后台获取用户的信息
   queryUserInfo(token) {
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
     http.queryUserInfoApi({
       data: {
         token: token
       },
       success: res => {
-        console.log(res.result)
+        wx.hideLoading()
         this.globalData.userInfo = res.result
+        wx.switchTab({
+          url: './pages/addBill/addBill'
+        })
       },
       fail: err => {
+        wx.hideLoading()
         console.log(err)
       }
     })

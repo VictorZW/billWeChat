@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/toGetUserInfo/toGetUserInfo",
     "pages/addBill/addBill",
     "pages/costDetail/costDetail",
     "pages/logs/logs",
     "pages/userPage/userPage",
+    "pages/toGetUserInfo/toGetUserInfo",
     "pages/index/index"
   ],
   "window": {

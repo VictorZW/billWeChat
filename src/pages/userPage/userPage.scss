@@ -5,6 +5,7 @@
   background-color: #5D93FC;
   .user-avatar {
     margin-right: 25px;
+    font-size: 0;
     .userInfo-avatar {
       width: 60px;
       height: 60px;
@@ -12,13 +13,11 @@
     }
   }
   .user-info-msg {
+    display: flex;
+    align-items: center;
     .user-name {
       color: #FFFFFF;
       font-size: 18px;
-    }
-    .registration-time {
-      color: #FFFFFF;
-      font-size: 12px;
     }
   }
 }
