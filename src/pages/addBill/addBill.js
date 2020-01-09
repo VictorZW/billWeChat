@@ -6,10 +6,15 @@ Page({
     pay_date: '',
     cost: '',
     category: '',
-    remark: ''
+    remark: '',
+    token: ''
   },
   onLoad() {
     this.getAllCategory()
+    const token = wx.getStorageSync('token') || ''
+    this.setData({
+      token: token
+    })
   },
   // 时间
   bindDateChange(e) {
@@ -54,7 +59,8 @@ Page({
       pay_date: this.data.pay_date,
       cost: this.data.cost,
       category: this.data.category,
-      remark: this.data.remark
+      remark: this.data.remark,
+      token: this.data.token
     }
     for (let key in sendData) {
       // 在这里判断传过来的参数值为null，就删除这个属性

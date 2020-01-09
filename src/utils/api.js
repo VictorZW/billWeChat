@@ -18,8 +18,8 @@ function addBillApi(body){
 }
 
 // 查询所有费用数据
-function getAllBill(params) {
-  http('/bill/getAllBill', 'get', params)
+function getAllBill(body) {
+  http('/bill/getAllBill', 'post', body)
 }
 
 // 登录
