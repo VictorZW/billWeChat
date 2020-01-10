@@ -76,7 +76,7 @@ Page({
       // 用户按了拒绝按钮
       wx.showToast({
         title: '靠北，你确定不授权？',
-        icon: 'success',
+        icon: 'none',
         duration: 2000
       })
     }
