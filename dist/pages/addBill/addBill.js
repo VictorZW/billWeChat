@@ -10,11 +10,15 @@ Page({
     token: ''
   },
   onLoad() {
-    this.getAllCategory()
     const token = wx.getStorageSync('token') || ''
-    this.setData({
-      token: token
-    })
+    if (token === null || token === '') {
+      console.log('还未登陆')
+    } else {
+      this.getAllCategory()
+      this.setData({
+        token: token
+      })
+    }
   },
   // 时间
   bindDateChange(e) {

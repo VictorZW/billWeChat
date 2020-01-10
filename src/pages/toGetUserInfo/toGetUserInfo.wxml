@@ -6,7 +6,7 @@
                 class="app-icon"
         ></image>
     </view>
-    <view class="app-name">My小本本</view>
+    <view class="app-name">小小账本</view>
     <view class="des">
         申请获取你的公开信息（昵称、头像等）
     </view>
