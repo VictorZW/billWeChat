@@ -8,12 +8,12 @@
 import { http } from './http'
 
 // 请求所有分类的接口
-function getAllCategoryApi(params){
+function getAllCategoryApi(params) {
   http('/category/getCategory', 'get', params)
 }
 
 // 新增账单信息
-function addBillApi(body){
+function addBillApi(body) {
   http('/bill/addBill', 'post', body)
 }
 
@@ -32,10 +32,16 @@ function queryUserInfoApi(body) {
   http('/users/queryUserInfo', 'post', body)
 }
 
+// 新增账单类型
+function addCategory(body) {
+  http('/category/addCategory', 'post', body)
+}
+
 export default {
   getAllCategoryApi,
   addBillApi,
   getAllBill,
   loginApi,
-  queryUserInfoApi
+  queryUserInfoApi,
+  addCategory
 }

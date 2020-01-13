@@ -20,7 +20,7 @@ const paths = {
     imgDir: 'src/image',
     imgFiles: 'src/image/**/*',
     scssFiles: 'src/**/*.scss',
-    baseFiles: ['src/**/*.{png,js,json,wxs}', '!src/assets/**/*', '!src/image/**/*'],
+    baseFiles: ['src/**/*.{png,js,json,wxs,wxss}', '!src/assets/**/*', '!src/image/**/*'],
     wxmlFiles: 'src/**/*.wxml',
     jsFiles: 'src/**/*.js'
   },

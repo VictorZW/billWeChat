@@ -4,6 +4,15 @@
               wx:for="{{allCategory}}"
               wx:for-item="item"
               wx:key="id">{{ item.category }}</view>
-        <view class="category-name add-btn">新增类型</view>
+        <view class="category-name add-btn" bindtap="open">新增类型</view>
     </view>
+    <mp-halfScreenDialog
+            extClass="add-category-pop"
+            show="{{showPop}}"
+            maskClosable="{{false}}"
+            title="新增类型"
+            subTitle="注意：目前新增的类型不支持删除！"
+            buttons="{{buttons}}"
+            bindbuttontap="buttonTap"
+    ></mp-halfScreenDialog>
 </view>

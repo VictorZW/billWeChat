@@ -23,6 +23,11 @@ Page({
       }
     }
   },
+  onShow() {
+    this.setData({
+      allCategory: app.globalData.allCategory
+    })
+  },
   // 时间
   bindDateChange(e) {
     this.setData({

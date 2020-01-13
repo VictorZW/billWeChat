@@ -21,3 +21,11 @@
     border: 1px solid #FF8C6E;
   }
 }
+
+.add-category-pop {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  .weui-input {
+    text-align: center;
+  }
+}

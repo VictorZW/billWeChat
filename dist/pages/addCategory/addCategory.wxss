@@ -23,3 +23,12 @@
   color: #FF8C6E;
   border: 2rpx solid #FF8C6E;
 }
+
+.add-category-pop {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.add-category-pop .weui-input {
+  text-align: center;
+}
