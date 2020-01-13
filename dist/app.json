@@ -5,6 +5,7 @@
     "pages/logs/logs",
     "pages/userPage/userPage",
     "pages/toGetUserInfo/toGetUserInfo",
+    "pages/addCategory/addCategory",
     "pages/index/index"
   ],
   "window": {

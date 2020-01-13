@@ -1,0 +1,9 @@
+<view class="container">
+    <view class="category-list">
+        <view class="category-name"
+              wx:for="{{allCategory}}"
+              wx:for-item="item"
+              wx:key="id">{{ item.category }}</view>
+        <view class="category-name add-btn">新增类型</view>
+    </view>
+</view>

@@ -1,13 +1,22 @@
 .section {
   height: 50px;
   border-bottom: 1px solid #DCE1EB;
-  display: flex;
-  align-items: center;
   padding: 0 12px;
   background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
   .title {
     margin-right: 10px;
   }
+  picker {
+     width: 240px;
+  }
+  .add-category {
+    font-weight: normal;
+  }
+}
+
+.picker-section {
   picker {
     width: 100%;
   }

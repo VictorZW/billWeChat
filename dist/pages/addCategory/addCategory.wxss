@@ -1,0 +1,25 @@
+.category-list {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 24rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-list .category-name {
+  min-width: 140rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #4083FF;
+  border: 2rpx solid #4C82FF;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 24rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.category-list .add-btn {
+  color: #FF8C6E;
+  border: 2rpx solid #FF8C6E;
+}

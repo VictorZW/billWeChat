@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="section">
+  <view class="section picker-section">
       <picker mode="date" value="{{date}}" start="2017-01-01" end="2030-01-01" bindchange="bindDateChange">
         <view class="picker">
           <text class="title">日期</text>{{ pay_date }}
@@ -19,13 +19,18 @@
             bindchange="bindPickerChange"
             mode="selector"
             value="{{index}}"
-            range="{{categoryList}}"
+            range="{{allCategory}}"
             range-key="category"
     >
       <view class="picker">
           <text class="title">类型</text>{{ category }}
       </view>
     </picker>
+    <button class="add-category"
+            type="default"
+            size="mini"
+            bindtap="toAddCategory"
+    >新增类型</button>
   </view>
   <view class="section">
     <text class="title">备注</text>

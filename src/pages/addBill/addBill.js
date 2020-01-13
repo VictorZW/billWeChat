@@ -3,7 +3,7 @@ const app = getApp()
 
 Page({
   data: {
-    categoryList: [],
+    allCategory: [],
     pay_date: '',
     cost: '',
     category: '',
@@ -16,7 +16,7 @@ Page({
     } else {
       if (app.globalData.allCategory) {
         this.setData({
-          categoryList: app.globalData.allCategory
+          allCategory: app.globalData.allCategory
         })
       } else {
         this.getAllCategory()
@@ -37,7 +37,7 @@ Page({
   },
   // 分类
   bindPickerChange(e) {
-    const selectData = this.data.categoryList[e.detail.value]
+    const selectData = this.data.allCategory[e.detail.value]
     this.setData({
       category: selectData.category
     })
@@ -54,7 +54,7 @@ Page({
       success:res=>{
         app.globalData.allCategory = res.result
         this.setData({
-          categoryList: res.result
+          allCategory: res.result
         })
       },
       fail:err => {
@@ -112,6 +112,11 @@ Page({
           duration: 2000
         })
       }
+    })
+  },
+  toAddCategory() {
+    wx.navigateTo({
+      url: '/pages/addCategory/addCategory'
     })
   }
 })

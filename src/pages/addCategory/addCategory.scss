@@ -1,0 +1,23 @@
+.category-list {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  .category-name {
+    min-width: 70px;
+    height: 25px;
+    font-size: 14px;
+    color: #4083FF;
+    border: 1px solid #4C82FF;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .add-btn {
+    color: #FF8C6E;
+    border: 1px solid #FF8C6E;
+  }
+}
