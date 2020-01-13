@@ -1,4 +1,5 @@
 import http from '../../utils/api'
+const app = getApp()
 
 Page({
   data: {
@@ -6,18 +7,20 @@ Page({
     pay_date: '',
     cost: '',
     category: '',
-    remark: '',
-    token: ''
+    remark: ''
   },
   onLoad() {
     const token = wx.getStorageSync('token') || ''
     if (token === null || token === '') {
       console.log('还未登陆')
     } else {
-      this.getAllCategory()
-      this.setData({
-        token: token
-      })
+      if (app.globalData.allCategory) {
+        this.setData({
+          categoryList: app.globalData.allCategory
+        })
+      } else {
+        this.getAllCategory()
+      }
     }
   },
   // 时间
@@ -49,6 +52,7 @@ Page({
     http.getAllCategoryApi({
       data: {},
       success:res=>{
+        app.globalData.allCategory = res.result
         this.setData({
           categoryList: res.result
         })
@@ -63,8 +67,7 @@ Page({
       pay_date: this.data.pay_date,
       cost: this.data.cost,
       category: this.data.category,
-      remark: this.data.remark,
-      token: this.data.token
+      remark: this.data.remark
     }
     for (let key in sendData) {
       // 在这里判断传过来的参数值为null，就删除这个属性

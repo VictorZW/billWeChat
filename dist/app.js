@@ -29,19 +29,42 @@ App({
         token: token
       },
       success: res => {
-        wx.hideLoading()
         this.globalData.userInfo = res.result
+        this.getAllCategory()
+      },
+      fail: err => {
+        wx.hideLoading()
+        wx.showToast({
+          title: err,
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
+  },
+  // 获得所有账单分类
+  getAllCategory() {
+    http.getAllCategoryApi({
+      data: {},
+      success:res=>{
+        this.globalData.allCategory = res.result
+        wx.hideLoading()
         wx.switchTab({
           url: './pages/addBill/addBill'
         })
       },
-      fail: err => {
+      fail:err => {
         wx.hideLoading()
-        console.log(err)
+        wx.showToast({
+          title: err,
+          icon: 'none',
+          duration: 2000
+        })
       }
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    allCategory: null
   }
 })

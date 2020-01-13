@@ -1,5 +1,4 @@
-import http from "../../utils/api";
-
+import http from "../../utils/api"
 const app = getApp()
 
 Page({

@@ -4,13 +4,12 @@
  * @desc:
  **/
 const baseUrl = 'https://www.haha2haha.com/api'
+
 module.exports = {
   http(url, method, params) {
-    let token = 'token' // 获取token，自行获取token和签名，token和签名表示每个接口都要发送的数据
-    let sign = 'sign' // 获取签名
+    let token = wx.getStorageSync('token') || ''
     let data = {
-      token,
-      sign
+      token
     }
     if (params.data) {
       // 在这里判断一下data是否存在，params表示前端需要传递的数据，params是一个对象，有三组键值对，
@@ -23,8 +22,7 @@ module.exports = {
           delete params.data[key]
         }
       }
-      // data = { ...data, ...params.data }
-      data = { ...params.data }
+      data = { ...data, ...params.data }
     }
     wx.request({
       url: baseUrl + url, // 就是拼接上前缀,此接口域名是开放接口，可访问
