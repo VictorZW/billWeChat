@@ -17,7 +17,29 @@ Page({
     })
   },
   onShow() {
-    this.getAllCategory()
+    if (app.globalData.allCategory === null) {
+      this.getAllCategory()
+    } else {
+      this.setData({
+        allCategory: app.globalData.allCategory,
+        category: app.globalData.allCategory === null ? '' : app.globalData.allCategory[0].category
+      })
+    }
+  },
+  getAllCategory() {
+    http.getAllCategoryApi({
+      data: {},
+      success:res=>{
+        app.globalData.allCategory = res.result
+        this.setData({
+          allCategory: res.result,
+          category: res.result === null ? '' : res.result[0].category
+        })
+      },
+      fail:err => {
+        console.log(err)
+      }
+    })
   },
   // 时间
   bindDateChange(e) {
@@ -42,21 +64,6 @@ Page({
   bindTextAreaInput(e) {
     this.setData({
       remark: e.detail.value
-    })
-  },
-  getAllCategory() {
-    http.getAllCategoryApi({
-      data: {},
-      success:res=>{
-        app.globalData.allCategory = res.result
-        this.setData({
-          allCategory: res.result,
-          category: res.result === null ? '' : res.result[0].category
-        })
-      },
-      fail:err => {
-        console.log(err)
-      }
     })
   },
   // 提交账单信息
