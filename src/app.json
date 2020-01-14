@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/addBill/addBill",
     "pages/costDetail/costDetail",
+    "pages/addBill/addBill",
     "pages/logs/logs",
     "pages/userPage/userPage",
     "pages/toGetUserInfo/toGetUserInfo",

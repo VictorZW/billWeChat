@@ -1,16 +1,18 @@
+.container {
+  padding-top: 80rpx;
+}
+
 .cost-list {
   display: flex;
   flex-direction: column;
-  padding: 20rpx;
   box-sizing: border-box;
 }
 
 .cost-list .cost-card {
   width: 100%;
-  background: white;
-  box-shadow: 0rpx 2rpx 4rpx 0rpx rgba(215, 215, 215, 0.5);
-  margin-bottom: 20rpx;
-  padding: 20rpx 20rpx 0;
+  background: #FFFFFF;
+  border-top: 2rpx solid #E6E6E6;
+  padding: 30rpx 30rpx 10rpx;
   box-sizing: border-box;
 }
 
@@ -21,9 +23,53 @@
 }
 
 .cost-list .cost-card .line .title {
-  color: #666666;
+  color: #333333;
 }
 
 .cost-list .cost-card .line text {
-  font-size: 28rpx;
+  font-size: 30rpx;
+}
+
+.select-area {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 22rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+}
+
+.select-area .time-select-area {
+  font-size: 30rpx;
+  color: #999999;
+  display: flex;
+}
+
+.select-area .time-select-area .start-time {
+  color: #5383F6;
+  padding-right: 20rpx;
+  min-width: 200rpx;
+  text-align: center;
+}
+
+.select-area .time-select-area .end-time {
+  color: #5383F6;
+  padding-left: 20rpx;
+  min-width: 200rpx;
+  text-align: center;
+}
+
+.select-area .category-select-area {
+  font-size: 30rpx;
+  display: flex;
+}
+
+.select-area .category-select-area text {
+  color: #5383F6;
 }

@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "详细流水",
   "enablePullDownRefresh": true,
-  "backgroundTextStyle": "dark"
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#F6F8FC"
 }

@@ -10,12 +10,19 @@ const formatTime = date => {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
+// 2020-01-02
 const formatTime2 = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
 
   return [year, month, day].map(formatNumber).join('-')
+}
+
+// 当前时间的n天前
+const getDateFromNow = (date, n) => {
+  const handleDate = new Date(date.getTime() - n * 24 * 3600 * 1000)
+  return formatTime2(handleDate)
 }
 
 const formatNumber = n => {
@@ -25,5 +32,6 @@ const formatNumber = n => {
 
 module.exports = {
   formatTime: formatTime,
-  formatTime2: formatTime2
+  formatTime2: formatTime2,
+  getDateFromNow: getDateFromNow
 }

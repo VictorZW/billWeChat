@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "日常记账"
+  "navigationBarTitleText": "日常记账",
+  "disableScroll": true
 }
