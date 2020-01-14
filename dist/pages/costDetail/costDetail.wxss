@@ -54,8 +54,6 @@
 .select-area .time-select-area .start-time {
   color: #5383F6;
   padding-right: 20rpx;
-  min-width: 200rpx;
-  text-align: center;
 }
 
 .select-area .time-select-area .end-time {

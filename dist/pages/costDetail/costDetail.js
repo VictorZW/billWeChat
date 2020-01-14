@@ -12,37 +12,35 @@ Page({
   onLoad() {
     const endTime = utils.formatTime2(new Date())
     const startTime = utils.getDateFromNow(new Date(), 100)
-    console.log(startTime)
-    this.getCostListData()
     this.setData({
       endTime: endTime,
       startTime: startTime
     })
+    this.getCostListData()
   },
   getCostListData() {
+    if (this.data.startTime > this.data.endTime) {
+      wx.showToast({
+        title: '开始时间不能大于结束时间',
+        icon: 'none',
+        duration: 2000
+      })
+      return false
+    }
+    const sendData = {
+      startTime: this.data.startTime,
+      endTime: this.data.endTime
+    }
     http.getAllBill({
-      data: {},
+      data: {
+        ...sendData
+      },
       success:res => {
         this.setData({
           costList: res.result
         })
       },
       fail:err => {
-        console.log(err)
-      }
-    })
-  },
-  onPullDownRefresh() {
-    http.getAllBill({
-      data: {},
-      success:res => {
-        wx.stopPullDownRefresh()
-        this.setData({
-          costList: res.result
-        })
-      },
-      fail:err => {
-        wx.stopPullDownRefresh()
         wx.showToast({
           title: err,
           icon: 'none',
@@ -51,14 +49,20 @@ Page({
       }
     })
   },
+  onPullDownRefresh() {
+    this.getCostListData()
+    wx.stopPullDownRefresh()
+  },
   bindStartDateChange(e) {
     this.setData({
       startTime: e.detail.value
     })
+    this.getCostListData()
   },
   bindEndDateChange(e) {
     this.setData({
       endTime: e.detail.value
     })
+    this.getCostListData()
   }
 })

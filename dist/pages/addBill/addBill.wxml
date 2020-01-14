@@ -23,7 +23,7 @@
     <picker
             bindchange="bindPickerChange"
             mode="selector"
-            value="{{index}}"
+            value="{{category}}"
             range="{{allCategory}}"
             range-key="category"
     >

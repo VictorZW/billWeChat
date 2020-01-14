@@ -19,7 +19,7 @@
             </picker>
         </view>
         <view class="category-select-area">
-            <text>类别筛选</text>
+            <!--<text>类别筛选</text>-->
         </view>
     </view>
     <view class="cost-list">
