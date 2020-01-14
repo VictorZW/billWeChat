@@ -11,6 +11,7 @@
     <input class="weui-input"
            type="digit"
            maxlength="9"
+           value="{{cost}}"
            bindinput="bindKeyInput"
            placeholder="0.0" />
   </view>
@@ -30,11 +31,12 @@
             type="default"
             size="mini"
             bindtap="toAddCategory"
-    >新增类型</button>
+    >管理类型</button>
   </view>
   <view class="section">
     <text class="title">备注</text>
     <textarea
+            value="{{remark}}"
             auto-height
             bindinput="bindTextAreaInput"
             maxlength="20"

@@ -5,7 +5,7 @@
                 class="cost-card"
                 wx:for="{{costList}}"
                 wx:for-item="item"
-                wx:key="item.id">
+                wx:key="id">
             <view class="line">
                 <text>
                     <text class="title">日期：</text>{{ filters.formatTime(item.pay_date) }}

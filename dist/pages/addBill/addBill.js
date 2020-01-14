@@ -1,4 +1,5 @@
 import http from '../../utils/api'
+import utils from '../../utils/util'
 const app = getApp()
 
 Page({
@@ -10,23 +11,13 @@ Page({
     remark: ''
   },
   onLoad() {
-    const token = wx.getStorageSync('token') || ''
-    if (token === null || token === '') {
-      console.log('还未登陆')
-    } else {
-      if (app.globalData.allCategory) {
-        this.setData({
-          allCategory: app.globalData.allCategory
-        })
-      } else {
-        this.getAllCategory()
-      }
-    }
+    const date = utils.formatTime2(new Date())
+    this.setData({
+      pay_date: date
+    })
   },
   onShow() {
-    this.setData({
-      allCategory: app.globalData.allCategory
-    })
+    this.getAllCategory()
   },
   // 时间
   bindDateChange(e) {
@@ -59,7 +50,8 @@ Page({
       success:res=>{
         app.globalData.allCategory = res.result
         this.setData({
-          allCategory: res.result
+          allCategory: res.result,
+          category: res.result === null ? '' : res.result[0].category
         })
       },
       fail:err => {
@@ -67,6 +59,7 @@ Page({
       }
     })
   },
+  // 提交账单信息
   submitData() {
     const sendData = {
       pay_date: this.data.pay_date,
@@ -103,7 +96,6 @@ Page({
           duration: 2000
         })
         this.setData({
-          pay_date: '',
           cost: '',
           category: '',
           remark: ''
@@ -119,6 +111,7 @@ Page({
       }
     })
   },
+  // 跳转到新增类型页面
   toAddCategory() {
     wx.navigateTo({
       url: '/pages/addCategory/addCategory'
