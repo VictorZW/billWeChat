@@ -30,8 +30,15 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+// 小数点取值n位小数
+const decimals = (num, n) => {
+  const pow = Math.pow(10, n)
+  return Math.round(num * pow) / pow
+}
+
 module.exports = {
   formatTime: formatTime,
   formatTime2: formatTime2,
-  getDateFromNow: getDateFromNow
+  getDateFromNow: getDateFromNow,
+  decimals: decimals
 }

@@ -1,35 +1,3 @@
-.container {
-  padding-top: 80rpx;
-}
-
-.cost-list {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.cost-list .cost-card {
-  width: 100%;
-  background: #FFFFFF;
-  border-top: 2rpx solid #E6E6E6;
-  padding: 30rpx 30rpx 10rpx;
-  box-sizing: border-box;
-}
-
-.cost-list .cost-card .line {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 20rpx;
-}
-
-.cost-list .cost-card .line .title {
-  color: #333333;
-}
-
-.cost-list .cost-card .line text {
-  font-size: 30rpx;
-}
-
 .select-area {
   width: 100%;
   height: 80rpx;
@@ -70,4 +38,13 @@
 
 .select-area .sub-area text {
   color: #5383F6;
+}
+
+.charts-area {
+  padding-top: 120rpx;
+}
+
+.charts-area .canvas-content {
+  width: 100%;
+  height: 500rpx;
 }

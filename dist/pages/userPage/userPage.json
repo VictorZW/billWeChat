@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "个人中心",
-  "backgroundColor": "#5D93FC"
+  "backgroundColor": "#5D93FC",
+  "disableScroll": true
 }

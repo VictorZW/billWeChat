@@ -2,7 +2,7 @@
   "pages": [
     "pages/addBill/addBill",
     "pages/costDetail/costDetail",
-    "pages/logs/logs",
+    "pages/reportPage/reportPage",
     "pages/userPage/userPage",
     "pages/toGetUserInfo/toGetUserInfo",
     "pages/addCategory/addCategory",
@@ -30,7 +30,7 @@
         "selectedIconPath": "images/costDetail_select.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/reportPage/reportPage",
         "text": "分析报告",
         "iconPath": "images/report.png",
         "selectedIconPath": "images/report_select.png"

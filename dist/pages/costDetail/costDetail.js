@@ -1,17 +1,17 @@
 import http from '../../utils/api'
-import utils from "../../utils/util";
-const util = require('../../utils/util.js')
+import util from '../../utils/util'
 
 Page({
   data: {
     costList: [],
     startTime: '',
     endTime: '',
-    category: ''
+    category: '',
+    sum: 0
   },
   onLoad() {
-    const endTime = utils.formatTime2(new Date())
-    const startTime = utils.getDateFromNow(new Date(), 100)
+    const endTime = util.formatTime2(new Date())
+    const startTime = util.getDateFromNow(new Date(), 100)
     this.setData({
       endTime: endTime,
       startTime: startTime
@@ -37,7 +37,8 @@ Page({
       },
       success:res => {
         this.setData({
-          costList: res.result
+          costList: res.result,
+          sum: res.sum
         })
       },
       fail:err => {

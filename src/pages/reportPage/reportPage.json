@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "分析报告",
+  "usingComponents": {
+    "ec-canvas": "../../components/ec-canvas/ec-canvas"
+  },
+  "disableScroll": true
+}

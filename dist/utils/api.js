@@ -37,11 +37,17 @@ function addCategory(body) {
   http('/category/addCategory', 'post', body)
 }
 
+// 查询饼图数据
+function getBillReport(body) {
+  http('/bill/getBillReport', 'post', body)
+}
+
 export default {
   getAllCategoryApi,
   addBillApi,
   getAllBill,
   loginApi,
   queryUserInfoApi,
-  addCategory
+  addCategory,
+  getBillReport
 }
