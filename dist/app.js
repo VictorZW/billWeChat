@@ -3,11 +3,7 @@ import http from './utils/api'
 
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
     const token = wx.getStorageSync('token') || ''
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
 
     // token为空,需要登录从后台获取token
     if (token === null || token === '') {

@@ -18,7 +18,8 @@ Page({
     },
     startTime: '',
     endTime: '',
-    sum: 0
+    sum: 0,
+    costList: []
   },
   onLoad() {
     const endTime = util.formatTime2(new Date())
@@ -62,7 +63,8 @@ Page({
       },
       success:res => {
         this.setData({
-          sum: res.sum
+          sum: res.sum,
+          costList: res.result
         })
         let chartsData = {
           series: [

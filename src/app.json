@@ -5,8 +5,7 @@
     "pages/reportPage/reportPage",
     "pages/userPage/userPage",
     "pages/toGetUserInfo/toGetUserInfo",
-    "pages/addCategory/addCategory",
-    "pages/index/index"
+    "pages/addCategory/addCategory"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -25,3 +25,23 @@
   color: #FFFFFF;
   font-size: 36rpx;
 }
+
+.sign-out {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 100rpx 0;
+}
+
+.sign-out .login-btn {
+  width: 600rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  min-height: auto;
+  padding: 0;
+  background-color: #4083FF;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+}

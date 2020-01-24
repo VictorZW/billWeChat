@@ -42,3 +42,21 @@
     height: 250px;
   }
 }
+
+.cost-list {
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  .line {
+    width: 50%;
+    padding-bottom: 10px;
+    display: flex;
+    .title, .cost {
+      font-size: 14px;
+    }
+    .title {
+      padding-right: 5px;
+    }
+  }
+}

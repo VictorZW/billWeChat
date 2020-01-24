@@ -48,3 +48,24 @@
   width: 100%;
   height: 500rpx;
 }
+
+.cost-list {
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cost-list .line {
+  width: 50%;
+  padding-bottom: 20rpx;
+  display: flex;
+}
+
+.cost-list .line .title, .cost-list .line .cost {
+  font-size: 28rpx;
+}
+
+.cost-list .line .title {
+  padding-right: 10rpx;
+}

@@ -29,4 +29,12 @@
             ></ec-canvas>
         </view>
     </view>
+    <view class="cost-list">
+        <view class="line"
+              wx:for="{{costList}}"
+              wx:for-item="item">
+            <view class="title">{{ item.name }}:</view>
+            <view class="cost">{{ item.value }} 元</view>
+        </view>
+    </view>
 </view>

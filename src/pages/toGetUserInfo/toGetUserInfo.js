@@ -13,8 +13,6 @@ Page({
         // 如果用户授权了
         if (res.authSetting['scope.userInfo']) {
           this.toLogin()
-        } else {
-          console.log('没授权')
         }
       }
     })
@@ -31,7 +29,6 @@ Page({
     wx.login({
       success: res => {
         const code = res.code
-        console.log('code:', code)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (code) {
           wx.getUserInfo({
