@@ -32,6 +32,9 @@ Page({
   onReady() {
     this.getCostListData()
   },
+  onShow() {
+    this.getCostListData()
+  },
   bindStartDateChange(e) {
     this.setData({
       startTime: e.detail.value
@@ -75,7 +78,6 @@ Page({
             }
           ]
         }
-        console.log(chartsData)
         chart.setOption(chartsData)
       },
       fail:err => {
@@ -86,27 +88,6 @@ Page({
         })
       }
     })
-  },
-  renderPie(data) {
-    console.log(data)
-    const option = {
-      aria: {
-        show: true
-      },
-      title: {
-        text: '某站点用户访问来源',
-        x: 'center'
-      },
-      series: [
-        {
-          name: '访问来源',
-          type: 'pie',
-          data: data
-        }
-      ]
-    }
-    console.log(chart)
-    chart.setOption(option)
   },
   onPullDownRefresh() {
     this.getCostListData()

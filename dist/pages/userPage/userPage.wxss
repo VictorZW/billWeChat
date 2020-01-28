@@ -45,3 +45,8 @@
   font-size: 28rpx;
   border-radius: 10rpx;
 }
+
+.tip {
+  text-align: center;
+  margin-top: 100rpx;
+}

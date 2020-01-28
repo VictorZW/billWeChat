@@ -70,11 +70,11 @@ Page({
       this.toLogin()
     } else {
       // 用户按了拒绝按钮
-      wx.showToast({
-        title: '靠北，你确定不授权？',
-        icon: 'none',
-        duration: 2000
-      })
+      // wx.showToast({
+      //   title: '靠北，你确定不授权？',
+      //   icon: 'none',
+      //   duration: 2000
+      // })
     }
   }
 })
