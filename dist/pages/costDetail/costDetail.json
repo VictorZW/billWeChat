@@ -2,5 +2,9 @@
   "navigationBarTitleText": "详细流水",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
-  "backgroundColor": "#F6F8FC"
+  "backgroundColor": "#F6F8FC",
+  "usingComponents": {
+    "mp-slideView": "../../components/slideView/slideView",
+    "mp-dialog": "../../components/dialog/dialog"
+  }
 }

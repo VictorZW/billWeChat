@@ -28,21 +28,29 @@
                 wx:for="{{costList}}"
                 wx:for-item="item"
                 wx:key="id">
-            <view class="line">
-                <text>
-                    <text class="title">日期：</text>{{ filters.formatTime(item.pay_date) }}
-                </text>
-                <text>
-                    <text class="title">类别：</text>{{ item.category }}
-                </text>
-                <text>
-                    <text class="title">金额：</text>{{ item.cost }}
-                </text>
-            </view>
-            <view class="line">
-                <text>
-                    <text class="title">备注：</text>{{ item.remark }}</text>
-            </view>
+            <mp-slideView buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+                <view class="line">
+                    <text>
+                        <text class="title">日期：</text>{{ filters.formatTime(item.pay_date) }}
+                    </text>
+                    <text>
+                        <text class="title">类别：</text>{{ item.category }}
+                    </text>
+                    <text>
+                        <text class="title">金额：</text>{{ item.cost }}
+                    </text>
+                </view>
+                <view class="line">
+                    <text>
+                        <text class="title">备注：</text>{{ item.remark }}</text>
+                </view>
+            </mp-slideView>
         </view>
     </view>
+    <mp-dialog title="确定删除这条记录吗？"
+               show="{{dialogShow}}"
+               bindbuttontap="tapDialogButton"
+               buttons="{{buttons}}">
+        <view>记录删除不可恢复！</view>
+    </mp-dialog>
 </view>

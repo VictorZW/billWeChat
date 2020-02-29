@@ -7,7 +7,24 @@ Page({
     startTime: '',
     endTime: '',
     category: '',
-    sum: 0
+    sum: 0,
+    slideButtons: [
+      {
+        id: 1,
+        type: 'warn',
+        text: '删除',
+        extClass: 'delData'
+      }],
+    dialogShow: false,
+    buttons: [
+      {
+        id: 1,
+        text: '取消'
+      },
+      {
+        id: 2,
+        text: '确定'
+      }]
   },
   onLoad() {
     const endTime = util.formatTime2(new Date())
@@ -65,5 +82,21 @@ Page({
       endTime: e.detail.value
     })
     this.getCostListData()
+  },
+  slideButtonTap(e) {
+    console.log(e)
+    console.log(e.detail)
+    this.openConfirm()
+  },
+  openConfirm: function () {
+    this.setData({
+      dialogShow: true
+    })
+  },
+  tapDialogButton(e) {
+    console.log(e)
+    this.setData({
+      dialogShow: false
+    })
   }
 })

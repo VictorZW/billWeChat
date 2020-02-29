@@ -12,14 +12,13 @@
   width: 100%;
   background: #FFFFFF;
   border-top: 2rpx solid #E6E6E6;
-  padding: 30rpx 30rpx 10rpx;
   box-sizing: border-box;
 }
 
 .cost-list .cost-card .line {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20rpx;
+  padding: 10rpx 20rpx 20rpx;
 }
 
 .cost-list .cost-card .line .title {

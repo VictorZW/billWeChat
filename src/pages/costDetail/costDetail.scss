@@ -10,12 +10,11 @@
     width: 100%;
     background: #FFFFFF;
     border-top: 1px solid #E6E6E6;
-    padding: 15px 15px 5px;
     box-sizing: border-box;
     .line {
       display: flex;
       justify-content: space-between;
-      padding-bottom: 10px;
+      padding: 5px 10px 10px;
       .title {
         color: #333333;
       }
