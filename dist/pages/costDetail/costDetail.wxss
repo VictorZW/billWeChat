@@ -42,6 +42,7 @@
   left: 0;
   right: 0;
   background-color: #FFFFFF;
+  z-index: 100;
 }
 
 .select-area .time-select-area {

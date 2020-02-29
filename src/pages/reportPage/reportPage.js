@@ -32,9 +32,9 @@ Page({
   onReady() {
     this.getCostListData()
   },
-  onShow() {
-    this.getCostListData()
-  },
+  // onShow() {
+  //   this.getCostListData()
+  // },
   bindStartDateChange(e) {
     this.setData({
       startTime: e.detail.value
