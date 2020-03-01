@@ -27,7 +27,10 @@
                 wx:for="{{costList}}"
                 wx:for-item="item"
                 wx:key="id">
-            <mp-slideView buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+            <mp-slideView
+                    data-choosed="{{item}}"
+                    buttons="{{slideButtons}}"
+                    bindbuttontap="slideButtonTap">
                 <view class="line">
                     <text>
                         <text class="title">日期：</text>{{ item.pay_date }}

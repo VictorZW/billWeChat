@@ -17,6 +17,10 @@ function addBillApi(body) {
   http('/bill/addBill', 'post', body)
 }
 
+function delBillApi(body) {
+  http('/bill/delBill', 'post', body)
+}
+
 // 查询所有费用数据
 function getAllBill(body) {
   http('/bill/getAllBill', 'post', body)
@@ -45,6 +49,7 @@ function getBillReport(body) {
 export default {
   getAllCategoryApi,
   addBillApi,
+  delBillApi,
   getAllBill,
   loginApi,
   queryUserInfoApi,

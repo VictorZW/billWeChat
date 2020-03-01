@@ -24,7 +24,8 @@ Page({
       {
         id: 2,
         text: '确定'
-      }]
+      }],
+    chooseData: ''
   },
   onLoad() {
     const endTime = util.formatTime2(new Date())
@@ -84,19 +85,51 @@ Page({
     this.getCostListData()
   },
   slideButtonTap(e) {
-    console.log(e)
-    console.log(e.detail)
-    this.openConfirm()
+    this.setData({
+      chooseData: e.currentTarget.dataset.choosed
+    })
+    if (e.detail.index === 0) {
+      // 删除账单按钮
+      this.openConfirm()
+    }
   },
-  openConfirm: function () {
+  openConfirm() {
     this.setData({
       dialogShow: true
     })
   },
   tapDialogButton(e) {
-    console.log(e)
+    if (e.detail.item.text === '确定') {
+      console.log('确定删除')
+      const sendData = {
+        id: this.data.chooseData.id
+      }
+      http.delBillApi({
+        data: {
+          ...sendData
+        },
+        success:res => {
+          wx.showToast({
+            title: res.message,
+            icon: 'success',
+            duration: 2000
+          })
+          this.getCostListData()
+        },
+        fail:err => {
+          wx.showToast({
+            title: err,
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      })
+    } else {
+      console.log('不删除')
+    }
     this.setData({
-      dialogShow: false
+      dialogShow: false,
+      chooseData: ''
     })
   }
 })
