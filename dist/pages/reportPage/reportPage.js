@@ -11,7 +11,7 @@ Page({
         chart = echarts.init(canvas, null, {
           width: width,
           height: height
-        });
+        })
         canvas.setChart(chart)
         return chart
       }
@@ -32,9 +32,12 @@ Page({
   onReady() {
     this.getCostListData()
   },
-  // onShow() {
-  //   this.getCostListData()
-  // },
+  onShow() {
+    if (chart === null) {
+      return false
+    }
+    this.getCostListData()
+  },
   bindStartDateChange(e) {
     this.setData({
       startTime: e.detail.value
