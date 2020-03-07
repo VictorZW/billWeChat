@@ -5,21 +5,29 @@
                     value="{{startTime}}"
                     bindchange="bindStartDateChange">
                 <view class="picker">
-                    <view class="start-time">{{ startTime }}</view>
+                    <view class="start-time">
+                        {{ startTime }}
+                        <image class="up-icon"
+                               src="../../images/up.png"></image>
+                    </view>
                 </view>
             </picker>
-            至
+            <view class="s-text">至</view>
             <picker mode="date"
                     value="{{endTime}}"
                     bindchange="bindEndDateChange">
                 <view class="picker">
-                    <view class="end-time">{{ endTime }}</view>
+                    <view class="end-time">
+                        {{ endTime }}
+                        <image class="up-icon"
+                               src="../../images/up.png"></image>
+                    </view>
                 </view>
             </picker>
         </view>
-        <view class="sub-area">
-            <text>合计：{{ sum }} 元</text>
-        </view>
+        <image class="choose-cat"
+               src="../../images/filter.png"
+        ></image>
     </view>
     <view class="cost-list">
         <view
@@ -48,6 +56,9 @@
                 </view>
             </mp-slideView>
         </view>
+    </view>
+    <view class="sub-area">
+        <text>合计：{{ sum }} 元</text>
     </view>
     <mp-dialog title="确定删除这条记录吗？"
                show="{{dialogShow}}"
