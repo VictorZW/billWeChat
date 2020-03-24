@@ -25,9 +25,12 @@
                 </view>
             </picker>
         </view>
-        <image class="choose-cat"
-               src="../../images/filter.png"
-        ></image>
+        <view class="choose-cat-area">
+            <text>类别</text>
+            <image class="choose-cat"
+                   src="../../images/filter.png"
+            ></image>
+        </view>
     </view>
     <view class="cost-list">
         <view

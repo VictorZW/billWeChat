@@ -62,7 +62,14 @@
   vertical-align: middle;
 }
 
-.select-area .choose-cat {
+.select-area .choose-cat-area {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.select-area .choose-cat-area .choose-cat {
   width: 40rpx;
   height: 40rpx;
 }

@@ -53,9 +53,15 @@
       vertical-align: middle;
     }
   }
-  .choose-cat {
-    width: 20px;
-    height: 20px;
+  .choose-cat-area {
+    font-size: 15px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    .choose-cat {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
