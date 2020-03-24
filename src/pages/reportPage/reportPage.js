@@ -21,32 +21,11 @@ Page({
     sum: 0,
     costList: []
   },
-  onLoad() {
-    const endTime = util.formatTime2(new Date())
-    const startTime = util.getDateFromNow(new Date(), 100)
+  setParamsData(data) {
+    const params = data.detail
     this.setData({
-      endTime: endTime,
-      startTime: startTime
-    })
-  },
-  onReady() {
-    this.getCostListData()
-  },
-  onShow() {
-    if (chart === null) {
-      return false
-    }
-    this.getCostListData()
-  },
-  bindStartDateChange(e) {
-    this.setData({
-      startTime: e.detail.value
-    })
-    this.getCostListData()
-  },
-  bindEndDateChange(e) {
-    this.setData({
-      endTime: e.detail.value
+      endTime: params.endTime,
+      startTime: params.startTime
     })
     this.getCostListData()
   },

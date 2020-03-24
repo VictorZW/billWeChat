@@ -1,0 +1,33 @@
+<view class="select-area">
+    <view class="time-select-area">
+        <picker mode="date"
+                value="{{startTime}}"
+                bindchange="bindStartDateChange">
+            <view class="picker">
+                <view class="start-time">
+                    {{ startTime }}
+                    <image class="up-icon"
+                           src="../../images/up.png"></image>
+                </view>
+            </view>
+        </picker>
+        <view class="s-text">至</view>
+        <picker mode="date"
+                value="{{endTime}}"
+                bindchange="bindEndDateChange">
+            <view class="picker">
+                <view class="end-time">
+                    {{ endTime }}
+                    <image class="up-icon"
+                           src="../../images/up.png"></image>
+                </view>
+            </view>
+        </picker>
+    </view>
+    <view class="choose-cat-area">
+        <text>类别</text>
+        <image class="choose-cat"
+               src="../../images/filter.png"
+        ></image>
+    </view>
+</view>

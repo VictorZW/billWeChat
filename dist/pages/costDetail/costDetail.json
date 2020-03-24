@@ -5,6 +5,7 @@
   "backgroundColor": "#F6F8FC",
   "usingComponents": {
     "mp-slideView": "../../components/slideView/slideView",
-    "mp-dialog": "../../components/dialog/dialog"
+    "mp-dialog": "../../components/dialog/dialog",
+    "filter-comp": "../../components/FilterComp/FilterComp"
   }
 }

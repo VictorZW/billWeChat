@@ -1,0 +1,43 @@
+.select-area {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #5D93FC;
+  z-index: 100;
+}
+
+.select-area .time-select-area {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  display: flex;
+}
+
+.select-area .time-select-area .s-text {
+  padding: 0 20rpx;
+}
+
+.select-area .time-select-area .up-icon {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.select-area .choose-cat-area {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.select-area .choose-cat-area .choose-cat {
+  width: 40rpx;
+  height: 40rpx;
+}

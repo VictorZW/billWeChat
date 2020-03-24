@@ -1,45 +1,3 @@
-.select-area {
-  width: 100%;
-  height: 80rpx;
-  padding: 0 22rpx;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #FFFFFF;
-}
-
-.select-area .time-select-area {
-  font-size: 30rpx;
-  color: #999999;
-  display: flex;
-}
-
-.select-area .time-select-area .start-time {
-  color: #5383F6;
-  padding-right: 20rpx;
-}
-
-.select-area .time-select-area .end-time {
-  color: #5383F6;
-  padding-left: 20rpx;
-  min-width: 200rpx;
-  text-align: center;
-}
-
-.select-area .sub-area {
-  font-size: 30rpx;
-  display: flex;
-}
-
-.select-area .sub-area text {
-  color: #5383F6;
-}
-
 .charts-area {
   padding-top: 120rpx;
 }
@@ -68,4 +26,22 @@
 
 .cost-list .line .title {
   padding-right: 10rpx;
+}
+
+.sub-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  background-color: #5D93FC;
+}
+
+.sub-area text {
+  color: #FFFFFF;
 }

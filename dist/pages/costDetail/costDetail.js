@@ -1,5 +1,4 @@
 import http from '../../utils/api'
-import util from '../../utils/util'
 
 Page({
   data: {
@@ -27,12 +26,11 @@ Page({
       }],
     chooseData: ''
   },
-  onLoad() {
-    const endTime = util.formatTime2(new Date())
-    const startTime = util.getDateFromNow(new Date(), 100)
+  setParamsData(data) {
+    const params = data.detail
     this.setData({
-      endTime: endTime,
-      startTime: startTime
+      endTime: params.endTime,
+      startTime: params.startTime
     })
     this.getCostListData()
   },
@@ -72,18 +70,7 @@ Page({
     this.getCostListData()
     wx.stopPullDownRefresh()
   },
-  bindStartDateChange(e) {
-    this.setData({
-      startTime: e.detail.value
-    })
-    this.getCostListData()
-  },
-  bindEndDateChange(e) {
-    this.setData({
-      endTime: e.detail.value
-    })
-    this.getCostListData()
-  },
+  // 滑动删除账单事件
   slideButtonTap(e) {
     this.setData({
       chooseData: e.currentTarget.dataset.choosed

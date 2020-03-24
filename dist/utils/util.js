@@ -19,6 +19,15 @@ const formatTime2 = date => {
   return [year, month, day].map(formatNumber).join('-')
 }
 
+// 获取当月的1号
+const getDayOfMonth = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = 1
+
+  return [year, month, day].map(formatNumber).join('-')
+}
+
 // 当前时间的n天前
 const getDateFromNow = (date, n) => {
   const handleDate = new Date(date.getTime() - n * 24 * 3600 * 1000)
@@ -37,8 +46,9 @@ const decimals = (num, n) => {
 }
 
 module.exports = {
-  formatTime: formatTime,
-  formatTime2: formatTime2,
-  getDateFromNow: getDateFromNow,
-  decimals: decimals
+  formatTime,
+  formatTime2,
+  getDateFromNow,
+  getDayOfMonth,
+  decimals
 }
