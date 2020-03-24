@@ -67,6 +67,6 @@
                show="{{dialogShow}}"
                bindbuttontap="tapDialogButton"
                buttons="{{buttons}}">
-        <view>记录删除不可恢复！</view>
+        <view>记录删除不可恢复test！</view>
     </mp-dialog>
 </view>
