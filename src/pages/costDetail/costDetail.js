@@ -24,7 +24,8 @@ Page({
         id: 2,
         text: '确定'
       }],
-    chooseData: ''
+    chooseData: '',
+    showEmptyIcon: false
   },
   setParamsData(data) {
     const params = data.detail
@@ -47,17 +48,32 @@ Page({
       startTime: this.data.startTime,
       endTime: this.data.endTime
     }
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
     http.getAllBill({
       data: {
         ...sendData
       },
       success:res => {
-        this.setData({
-          costList: res.result,
-          sum: res.sum
-        })
+        wx.hideLoading()
+        if (res.result.length === 0) {
+          this.setData({
+            costList: res.result,
+            sum: res.sum,
+            showEmptyIcon: true
+          })
+        } else {
+          this.setData({
+            costList: res.result,
+            sum: res.sum,
+            showEmptyIcon: false
+          })
+        }
       },
       fail:err => {
+        wx.hideLoading()
         wx.showToast({
           title: err,
           icon: 'none',

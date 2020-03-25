@@ -1,0 +1,4 @@
+<view class="no-list">
+    <image class="empty-icon" src="../../images/empty.png"></image>
+    <view class="tips">{{ title }}</view>
+</view>

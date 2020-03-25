@@ -19,7 +19,8 @@ Page({
     startTime: '',
     endTime: '',
     sum: 0,
-    costList: []
+    costList: [],
+    showEmptyIcon: false
   },
   setParamsData(data) {
     const params = data.detail
@@ -42,27 +43,42 @@ Page({
       startTime: this.data.startTime,
       endTime: this.data.endTime
     }
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    })
     http.getBillReport({
       data: {
         ...sendData
       },
       success:res => {
-        this.setData({
-          sum: res.sum,
-          costList: res.result
-        })
-        let chartsData = {
-          series: [
-            {
-              name: '账单统计',
-              type: 'pie',
-              data: res.result
-            }
-          ]
+        wx.hideLoading()
+        if (res.result.length === 0) {
+          this.setData({
+            sum: res.sum,
+            costList: res.result,
+            showEmptyIcon: true
+          })
+        } else {
+          this.setData({
+            sum: res.sum,
+            costList: res.result,
+            showEmptyIcon: false
+          })
+          let chartsData = {
+            series: [
+              {
+                name: '账单统计',
+                type: 'pie',
+                data: res.result
+              }
+            ]
+          }
+          chart.setOption(chartsData)
         }
-        chart.setOption(chartsData)
       },
       fail:err => {
+        wx.hideLoading()
         wx.showToast({
           title: err,
           icon: 'none',

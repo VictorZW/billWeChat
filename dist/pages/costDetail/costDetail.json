@@ -6,6 +6,7 @@
   "usingComponents": {
     "mp-slideView": "../../components/slideView/slideView",
     "mp-dialog": "../../components/dialog/dialog",
-    "filter-comp": "../../components/FilterComp/FilterComp"
+    "filter-comp": "../../components/FilterComp/FilterComp",
+    "empty-page": "../../components/empty-page/empty-page"
   }
 }

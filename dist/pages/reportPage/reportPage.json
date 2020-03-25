@@ -2,7 +2,8 @@
   "navigationBarTitleText": "分析报告",
   "usingComponents": {
     "ec-canvas": "../../components/ec-canvas/ec-canvas",
-    "filter-comp": "../../components/FilterComp/FilterComp"
+    "filter-comp": "../../components/FilterComp/FilterComp",
+    "empty-page": "../../components/empty-page/empty-page"
   },
   "disableScroll": true
 }
