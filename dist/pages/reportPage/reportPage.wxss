@@ -1,3 +1,7 @@
+.container {
+  padding-top: 80rpx;
+}
+
 .charts-area {
   padding-top: 120rpx;
 }
