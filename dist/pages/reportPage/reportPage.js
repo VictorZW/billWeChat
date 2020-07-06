@@ -1,20 +1,21 @@
-import util from '../../utils/util'
 import http from '../../utils/api'
 import * as echarts from '../../components/ec-canvas/echarts'
 
 let chart = null
 
+function initChart(canvas, width, height) {
+  chart = echarts.init(canvas, null, {
+    width: width,
+    height: height
+  })
+  canvas.setChart(chart)
+  return chart
+}
+
 Page({
   data: {
     ec: {
-      onInit: (canvas, width, height) => {
-        chart = echarts.init(canvas, null, {
-          width: width,
-          height: height
-        })
-        canvas.setChart(chart)
-        return chart
-      }
+      onInit: initChart
     },
     startTime: '',
     endTime: '',
@@ -28,6 +29,9 @@ Page({
       endTime: params.endTime,
       startTime: params.startTime
     })
+    this.getCostListData()
+  },
+  onReady() {
     this.getCostListData()
   },
   getCostListData() {
@@ -74,7 +78,8 @@ Page({
               }
             ]
           }
-          chart.setOption(chartsData)
+          console.log(chart)
+          chart && chart.setOption(chartsData)
         }
       },
       fail:err => {
@@ -86,9 +91,5 @@ Page({
         })
       }
     })
-  },
-  onPullDownRefresh() {
-    this.getCostListData()
-    wx.stopPullDownRefresh()
   }
 })
